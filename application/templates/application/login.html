@@ -37,7 +37,7 @@
 					<input type="text" name="mobile" placeholder="Contact Number" required="">
 					<input type="password" name="pass1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Create Password" required="" >
 					<input type="password" name="pass2" placeholder="Confirm Password" required="">
-					<button>Sign up</button>
+					<button onclick="succAlert()">Sign up</button>
 				</form>
 			</div>
 
@@ -54,6 +54,12 @@
 </body>
 </html>
 <!-- partial -->
-  
+<script>
+	function succAlert(){
+		if(confirm("Is Your Registered Mail is correct ?")) {
+			alert("We have successfully shared confirmaion mail on regestered mail id")
+		}
+	}
+  </script>
 </body>
 </html>
