@@ -20,8 +20,8 @@ warnings.filterwarnings("ignore")
 import pandas as pd
 
 # Create your views here.
-def home(request):
-    return render(request, 'application/mainPage.html')
+def home(request, fname=None, uname=None):
+    return render(request, 'application/mainPage.html', {'fname':fname, 'uname':uname})
 
 
 def getCasteList ( cat , gender,collegedata ):
@@ -225,8 +225,8 @@ def loginfunc(request):
             if uname == 'admin':
                 d = UserInformation.objects.order_by().values('fname', 'mobile', 'email').distinct()
                 return render(request,'application/userlist.html',{'users': d})
-            # skey = request.session.session_key
-            return render(request, "application/mainPage.html", {'fname':fname, 'uname':uname})
+            skey = request.session.session_key
+            return render(request, "application/mainPage.html", {'fname':fname, 'uname':uname, 'session_key':skey})
         else:
            messages.error(request, "Bad request")
            return redirect('signup')
