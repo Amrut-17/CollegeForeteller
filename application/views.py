@@ -61,14 +61,14 @@ def getlistofcolleges ( region , gender , category , coursename, cettotal , cetp
       if castename in castes:
         filepath = basepath+path + '/' + f
         lg = pickle.load(open(filepath,'rb'))
-        print('cettotal ', cettotal, type(cettotal) )
-        print('cetphysics ', cetphysics, type(cetphysics) )
-        print('cetchemistry ', cetchemistry, type(cetchemistry) )
-        print('cetmaths ', cetmaths, type(cetmaths) )
-        print('hsctotal ', hsctotal, type(hsctotal) )
-        print('hscphysics ', hscphysics, type(hscphysics) )
-        print('hscchemistry ', hscchemistry, type(hscchemistry) )
-        print('hscmaths ', hscmaths, type(hscmaths) )
+        # print('cettotal ', cettotal, type(cettotal) )
+        # print('cetphysics ', cetphysics, type(cetphysics) )
+        # print('cetchemistry ', cetchemistry, type(cetchemistry) )
+        # print('cetmaths ', cetmaths, type(cetmaths) )
+        # print('hsctotal ', hsctotal, type(hsctotal) )
+        # print('hscphysics ', hscphysics, type(hscphysics) )
+        # print('hscchemistry ', hscchemistry, type(hscchemistry) )
+        # print('hscmaths ', hscmaths, type(hscmaths) )
         
         r = lg.predict([[float(cettotal),float(cetphysics),float(cetchemistry),float(cetmaths),float(hsctotal),float(hscphysics),float(hscchemistry),float(hscmaths)]])
         # r = lg.predict([[50.0,	50.0,	59.949508,	59.989902,	58.33,	50.0,	88.0,	88.00]])
