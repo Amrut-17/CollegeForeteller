@@ -209,13 +209,13 @@ def loginfunc(request):
     if request.method == 'POST':
         username = request.POST['username']
         pass1 = request.POST['pass1']
-        basepath = "/DYE/DYE/REPO/"
-        with open(basepath+"data.txt", "r") as fp:
-            for i in fp:
-                data = fp.read().splitlines()
-                if username in data and pass1=="Abcd_123":
-                    d = UserInformation.objects.order_by().values('fname', 'mobile', 'email').distinct()
-                    return render(request,'application/userlist.html',{'users': d})
+        # basepath = "/DYE/DYE/REPO/"
+        # with open(basepath+"data.txt", "r") as fp:
+        #     for i in fp:
+        #         data = fp.read().splitlines()
+        #         if username in data and pass1=="Abcd_123":
+        #             d = UserInformation.objects.order_by().values('fname', 'mobile', 'email').distinct()
+        #             return render(request,'application/userlist.html',{'users': d})
         
         user = authenticate(username=username, password=pass1)
         if user is not None:
