@@ -141,7 +141,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SESSION_COOKIE_SAMESITE = 'None'
 SESSION_COOKIE_SAMESITE_FORCE_ALL = True
-# SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 SESSION_COOKIE_HTTPONLY=False
 SESSION_ENGIN='django.contrib.sessions.backends.signed_cookies'
