@@ -30,13 +30,13 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = 'django-insecure-!xl524!c$db#w448@l=t!oc_xs+dxkz36#at_qz40h8scf#q6e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 # ALLOWED_HOSTS=[]
 # web: gunicorn CollegeForteller.wsgi
-ALLOWED_HOSTS = ["collegeforetellers.herokuapp.com", "localhost", "forteller-college.herokuapp.com"]
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
 
 # Application definition
@@ -147,3 +147,7 @@ SESSION_COOKIE_HTTPONLY=False
 SESSION_ENGIN='django.contrib.sessions.backends.signed_cookies'
 
 # fifth version is pushed
+
+
+STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
